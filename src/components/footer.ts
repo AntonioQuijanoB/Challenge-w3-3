@@ -8,10 +8,6 @@ export class Footer extends Component {
   }
 
   createTemplate() {
-    return `
-    <footer class="footer">
-      <address class="footer__text">ISDI Coders</address>
-    </footer>
-    `;
+    return `<footer><address>ISDI Coders</address></footer>`;
   }
 }

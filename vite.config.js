@@ -6,9 +6,6 @@ export default defineConfig({
     rollupOptions: {
       input: {
         home: resolve(__dirname, 'index.html'),
-        got: resolve(__dirname, 'got.html'),
-        gotC: resolve(__dirname, 'got-c.html'),
-        vite: resolve(__dirname, 'vite.html'),
       },
     },
   },

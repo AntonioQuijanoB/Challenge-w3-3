@@ -1,8 +1,6 @@
-import './main.css';
 import { Component } from './component';
 
-export class Main extends Component {
-  // eslint-disable-next-line no-useless-constructor
+export class Footer extends Component {
   constructor(selector: string) {
     super(selector);
     this.template = this.createTemplate();
@@ -10,10 +8,6 @@ export class Main extends Component {
   }
 
   createTemplate() {
-    return `
-     <main>
-
-    </main>
-    `;
+    return `<h1>Patata</h1>`;
   }
 }
