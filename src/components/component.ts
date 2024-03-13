@@ -11,13 +11,6 @@ export abstract class Component {
     const targetElement = document.querySelector<HTMLElement>(this.selector);
     if (!targetElement) return;
     targetElement.insertAdjacentHTML(position, this.template);
-    if (position === 'beforeend') {
-      this.element = targetElement.lastElementChild! as HTMLElement;
-    }
-  }
-
-  unRender() {
-    this.element.outerHTML = '';
   }
 }
 
