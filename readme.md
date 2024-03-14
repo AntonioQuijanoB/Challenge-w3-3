@@ -1,124 +1,32 @@
-# Learning JS en la Web
+# Pet List
 
-Información y ejemplos del Bootcamp de ISDI-Coders
+Cada mascota es un objeto con
 
-- TS: [TypeScript](https://www.typescriptlang.org/)
-- TS en la Web -> Componentes
-- Asincronía -> Promesas -> API Rest
+id
+name
+raza/especie
+isAdopted
+padre/madre adoptivo = dueño
+Existe una lista inicial (TS)
 
-## Configuración del entorno
+Se listan las mascotas
 
-Previamente instalados y configurados
+-------- Create - Read - Update - Delete
 
-- [Node.js](https://nodejs.org/es/)
-- [Visual Studio Code](https://code.visualstudio.com/)
-- [EsLint](https://eslint.org/)
-- [Jest](https://jestjs.io/)
+Se puede añadir mascotas
 
+Se borran mascotas
 
-## Configuración del entorno con VITE
+Se puede adoptar una mascotas |-> opcional
 
-Instalación de VITE
+----- Componentes: Clases: Component / Cada componente
 
-```bash
-npm create vite@latest <folder> --template vanilla-ts
-```
+--- Header --- Footer --- Lista --- Item (Mascota)
 
-Agregar .editorconfig
-Agregar readme.md
+--- Añadir
 
-Instalación / configuración de ESLint
+Opcional
+Añade una página Home, junto con la página de Lista y permite navegar entre ellas mediante un menú
 
-```bash
-npx eslint --init
-npm i -D eslint-config-prettier
-npm i @types/node
-```
-
-Añadimos en el fichero .eslintrc.json
-
-```json
-{
-  "extends": ["xo", "prettier"]
-}
-```
-
-Reescribimos el fichero .eslintrc.json
-
-```json
-{
-  "env": {
-    "browser": true,
-    "es2021": true,
-    "node": true,
-    "jest": true
-  },
-  "extends": ["xo", "prettier"],
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaVersion": "latest",
-    "sourceType": "module"
-  },
-  "plugins": ["@typescript-eslint"],
-  "rules": {
-    "max-params": "off"
-  }
-}
-```
-
-Añadimos en el fichero .package.json
-
-```json
-  "prettier": {
-    "singleQuote": true
-  }
-```
-
-Instalación / configuración de Jest
-
-```bash
-  npm i -D jest ts-jest @types/jest
-  npm i -D jest-ts-webcompat-resolver
-  npm i -D identity-obj-proxy
-```
-
-Configuramos en el fichero eslint
-
-```json
-  "env": {
-    ...
-    "jest": true
-  },
-```
-
-
-Configuramos en el fichero jest.config.js
-
-```js
-/** @type {import('ts-jest').JestConfigWithTsJest} */
-
-export default {
-  preset: 'ts-jest',
-  // testEnvironment: 'jsdom',
-  testPathIgnorePatterns: ['dist'],
-  resolver: 'jest-ts-webcompat-resolver',
-  moduleNameMapper: {
-    '\\.(css|scss)$': 'identity-obj-proxy',
-  },
-};
-```
-
-### Testing Library
-
-```bash
-
-npm i -D jest-environment-jsdom
-npm i -D @testing-library/dom @testing-library/jest-dom testing-library/user-event
-```
-
-Añadimos en el fichero jest.config.js
-
-```js
-testEnvironment: 'jsdom',
-```
-# Challenge-w3-3
+LO MAS IMPORTANTE y CRÍTICO
+Testamos todos
